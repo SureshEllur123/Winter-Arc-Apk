@@ -1,0 +1,7 @@
+{
+  "name": "Winter Arc – Routine Tracker",
+  "description": "Offline-first personal routine and habit tracker for the Winter Arc Challenge with streaks, calendar history, and daily mission progress.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

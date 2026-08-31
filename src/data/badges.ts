@@ -1,0 +1,81 @@
+import { Badge, StreakStats } from '../types';
+
+export const BADGES: Badge[] = [
+  {
+    id: 'badge-initiation',
+    title: 'The Initiation',
+    description: 'Complete your first day on the Winter Arc',
+    icon: '⚡',
+    condition: (stats) => stats.totalCompletedDays >= 1,
+  },
+  {
+    id: 'badge-3day-spark',
+    title: 'Ignition Streak',
+    description: 'Maintain a 3-day consecutive streak',
+    icon: '🔥',
+    condition: (stats) => stats.bestStreak >= 3 || stats.currentStreak >= 3,
+  },
+  {
+    id: 'badge-7day-iron',
+    title: 'Iron Will (1 Week)',
+    description: 'Conquer a 7-day uninterrupted streak',
+    icon: '🛡️',
+    condition: (stats) => stats.bestStreak >= 7 || stats.currentStreak >= 7,
+  },
+  {
+    id: 'badge-14day-frost',
+    title: 'Frost Walker (2 Weeks)',
+    description: 'Lock in 14 consecutive disciplined days',
+    icon: '❄️',
+    condition: (stats) => stats.bestStreak >= 14 || stats.currentStreak >= 14,
+  },
+  {
+    id: 'badge-21day-habit',
+    title: 'Rewired Circuit (21 Days)',
+    description: 'Forge unbreakable neural pathways with 21 days',
+    icon: '🧠',
+    condition: (stats) => stats.bestStreak >= 21 || stats.currentStreak >= 21,
+  },
+  {
+    id: 'badge-30day-cold',
+    title: 'Ice Cold Discipline (30 Days)',
+    description: 'Complete a full 1-month Winter Arc cycle',
+    icon: '🧊',
+    condition: (stats) => stats.bestStreak >= 30 || stats.currentStreak >= 30,
+  },
+  {
+    id: 'badge-60day-titan',
+    title: 'Titan of the Arc (60 Days)',
+    description: 'Reach 60 days of relentless execution',
+    icon: '⚔️',
+    condition: (stats) => stats.bestStreak >= 60 || stats.currentStreak >= 60,
+  },
+  {
+    id: 'badge-90day-legend',
+    title: 'Winter Arc Legend (90 Days)',
+    description: 'Ascend to the ultimate 90-Day Winter Arc summit',
+    icon: '👑',
+    condition: (stats) => stats.bestStreak >= 90 || stats.currentStreak >= 90,
+  },
+  {
+    id: 'badge-50-habits',
+    title: 'Half-Century Club',
+    description: 'Check off 50 total individual routine tasks',
+    icon: '🎯',
+    condition: (stats) => stats.totalHabitsDone >= 50,
+  },
+  {
+    id: 'badge-100-habits',
+    title: 'Century of Execution',
+    description: 'Check off 100 total individual routine tasks',
+    icon: '💎',
+    condition: (stats) => stats.totalHabitsDone >= 100,
+  },
+  {
+    id: 'badge-5-perfect',
+    title: 'Flawless Five',
+    description: 'Achieve 5 100% Perfect Days',
+    icon: '🌟',
+    condition: (stats) => stats.perfectDaysCount >= 5,
+  },
+];

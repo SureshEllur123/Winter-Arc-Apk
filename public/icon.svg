@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <linearGradient id="frostGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+    <linearGradient id="flameGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#EA580C" />
+      <stop offset="50%" stop-color="#F97316" />
+      <stop offset="100%" stop-color="#FDE047" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Shield/Rounded Canvas -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" stroke="#1E293B" stroke-width="8" />
+
+  <!-- Outer Ice Halo -->
+  <circle cx="256" cy="256" r="180" fill="none" stroke="url(#frostGrad)" stroke-width="6" stroke-dasharray="16 12" opacity="0.6" />
+
+  <!-- Frost Geometric Accents -->
+  <g stroke="url(#frostGrad)" stroke-width="8" stroke-linecap="round" opacity="0.8">
+    <line x1="256" y1="90" x2="256" y2="422" />
+    <line x1="90" y1="256" x2="422" y2="256" />
+    <line x1="138" y1="138" x2="374" y2="374" />
+    <line x1="138" y1="374" x2="374" y2="138" />
+    
+    <!-- Crystal Tips -->
+    <path d="M 236 120 L 256 100 L 276 120" fill="none" />
+    <path d="M 236 392 L 256 412 L 276 392" fill="none" />
+    <path d="M 120 236 L 100 256 L 120 276" fill="none" />
+    <path d="M 392 236 L 412 256 L 392 276" fill="none" />
+  </g>
+
+  <!-- Inner Dark Core -->
+  <circle cx="256" cy="256" r="120" fill="#0A0F1D" stroke="#334155" stroke-width="6" />
+
+  <!-- Central Winter Arc Flame of Discipline -->
+  <path d="M 256 160 C 270 200 310 230 310 280 C 310 320 285 348 256 348 C 227 348 202 320 202 280 C 202 245 228 215 240 190 C 244 210 250 225 262 235 C 265 210 260 185 256 160 Z" 
+        fill="url(#flameGrad)" 
+        filter="url(#glow)" />
+</svg>
